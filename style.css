@@ -1,0 +1,62 @@
+body {
+  font-family: 'Bellefair', serif;
+  background-image:url('background.jpeg');
+  background-position: center;
+  height: 100vh;
+}
+
+
+
+#showcase{
+  position: relative;
+  width: 60%;
+  min-width: 450px;
+  max-height: 500px;
+  background: #cccccc;
+  margin: 0 auto;
+  margin-top: 5%;
+  border-radius: 10px;
+  opacity: .85;
+  display: table;
+
+
+}
+
+#showcase button{
+  float: right;
+  margin-right: 20px;
+  margin-bottom: 30px;
+  height: 50px;
+  font-size: 18px;
+  background-color: #000;
+  opacity: .75;
+  color: gray;
+
+}
+
+.icons{
+  padding: 5px;
+  font-size: 50px;
+  width: auto;
+  margin-left: 10px;
+}
+
+
+.text{
+  margin: 0 auto;
+  text-align: center;
+  font-size: 40px;
+  padding: 10px;
+
+}
+
+#big-quote{
+  font-size: 50px;
+  margin-right: 5px;
+}
+
+
+#author{
+  font-size: 30px;
+
+}

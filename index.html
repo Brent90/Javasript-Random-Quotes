@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Random Quotes</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Bellefair" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="style.css" type="text/css" rel="stylesheet">
+
+
+</head>
+<body>
+
+<div class="container">
+  <div id="showcase">
+    <div id="text-goes-here" class="text">
+
+    </div>
+
+    <i class="fa fa-twitter-square icons" aria-hidden="true" title="share on twitter"></i>
+    <i class="fa fa-tumblr-square icons" aria-hidden="true" title="share on tumblr"></i>
+    <i class="fa fa-facebook-square icons" aria-hidden="true" title="share on facebook"></i>
+
+
+    <button onclick="getQuote()" id="button-style">Click to get a random quote</button>
+
+
+</div>
+</div>
+
+
+
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script>
+
+
+  function getQuote() {
+
+      $.getJSON("https://api.forismatic.com/api/1.0/?method=getQuote&format=json&lang=en", getData);
+
+      function getData(json) {
+        document.getElementById("text-goes-here").innerHTML = '<span id="big-quote" class="text">' + '<i class="fa fa-quote-left" aria-hidden="true"></i>' +
+        '</span>' + json.quoteText + "<br>" + "-" +  '<span id="author">' + json.quoteAuthor + '</span>';
+      }
+
+    };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </script>
+
+</body>
+</html>
